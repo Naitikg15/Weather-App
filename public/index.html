@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather App</h1>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name..." />
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="loading" class="loading hidden">Searching...</div>
+        <div id="error" class="error hidden"></div>
+
+        <div id="weatherResult" class="weather-card hidden">
+            <div class="weather-main">
+                <img id="weatherIcon" src="" alt="Weather icon" />
+                <div class="weather-info">
+                    <h2 id="cityName"></h2>
+                    <p id="temperature"></p>
+                    <p id="description"></p>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="label">Humidity:</span>
+                    <span id="humidity"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Pressure:</span>
+                    <span id="pressure"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Wind Speed:</span>
+                    <span id="windSpeed"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h3>Recent Searches</h3>
+            <div id="searchHistory" class="history-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
